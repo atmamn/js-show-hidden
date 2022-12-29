@@ -1,0 +1,87 @@
+*, body{
+	box-sizing: border-box;
+	margin: 0;
+
+}
+.show-hidden{
+	box-sizing: border-box;
+	height: 100vh;
+	overflow-x: hidden;
+	background-image: url('dom-manipulation.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+.show-hidden div p span{
+	font-size: 25px;
+}
+
+.show-hidden div p span:hover{
+	cursor: pointer;
+	color: red;
+}
+
+
+/* initial display set to none*/
+.hiddenItSelf-class{
+	display: none;
+	position: relative;
+}
+
+#hiddenItSelfID{
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%, -50%);
+	top: 60%;
+	border: 1px solid white;
+	background-color: white;
+	width: 150px;
+	text-align: center;
+	padding: 20px 5px;
+	font-size: 20px;
+	font-weight: bold;
+	animation-name: example;
+	animation-duration: 4s;
+}
+
+.hiddenItSelf-class.showHiddenClass{
+	display: block;
+	width: fit-content;
+	margin: auto;
+}
+
+#showHiddenID{
+	background-color: transparent;
+	color: white;
+	height: 3rem;
+	width: 8.5rem;
+	font-weight: bold;
+	border: 2px solid white;
+	border-radius: 10px;
+	padding: 5px;
+	transition: .5s;
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
+}
+
+#showHiddenID:hover{
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+
+@keyframes example {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 60%;
+		opacity: 1;
+	}
+}
